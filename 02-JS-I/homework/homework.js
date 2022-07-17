@@ -165,33 +165,52 @@ function elevar(num, exponent) {
     var product = Math.pow(num, exponent);
     return product;
 
-}
+} 
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+    var producto = Math.round(num);
+    return producto;
+
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+    var producto = Math.ceil(num);
+    return producto;
+
+
 }
 
-function numeroRandom() {
+function numeroRandom(min, max) {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+    min = Math.ceil (0);
+    max = Math.floor (1);
+    return Math.random() * (max - min) + min;
+
+
 }
 
 function esPositivo(numero) {
-  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
-  //Si el número es positivo, devolver ---> "Es positivo"
-  //Si el número es negativo, devolver ---> "Es negativo"
-  //Si el número es 0, devuelve false
-  
+    //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo.
+    //Si el número es positivo, devolver ---> "Es positivo"
+    //Si el número es negativo, devolver ---> "Es negativo"
+    //Si el número es 0, devuelve false
+    if (numero > 0) {
+        return "Es positivo";
+    }
+    else if (numero < 0) {
+        return "Es negativo";
+    }
+    else if (numero == 0)
+    {
+        return false;
+    }
 }
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
