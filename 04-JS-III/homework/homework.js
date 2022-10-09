@@ -9,13 +9,14 @@ function devolverPrimerElemento(array) {
     return array[0]
 
 
+
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
     // Tu código:
-    return array[array.length - 1] 
+    return array [array.length - 1]
 
 
 }
@@ -129,16 +130,17 @@ function promedioResultadosTest(resultadosTest) {
 
 
 function numeroMasGrande(numeros) {
-  // "numeros" debe ser una matriz de enteros (int/integers)
-  // Devuelve el número más grande
-  // Tu código:
+    // "numeros" debe ser una matriz de enteros (int/integers)
+    // Devuelve el número más grande
+    // Tu código:
     var cajita = 0;
 
-    for (var i = 0; i < numeros.length; i++)
-        if (numeros[i] > cajita) {
-            cajita = numeros[i];
+    for (var i = 0; i < numeros.length; i++) { 
+    if (numeros[i] > cajita) {
+        cajita = numeros[i];
 
-        }
+    }
+}
 
     return cajita;	
 
@@ -308,12 +310,12 @@ function breakStatement(numero) {
 
 
 function continueStatement(numero) {
-  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
-  //Guardar cada nuevo valor en un array.
-  //Devolver el array
-  //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
-  //Pista: usá el statement 'continue'
-  // Tu código:
+    //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+    //Guardar cada nuevo valor en un array.
+    //Devolver el array
+    //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
+    //Pista: usá el statement 'continue'
+    // Tu código:
     var arrayNumeros = [];
 
     var suma = numero;
@@ -324,11 +326,13 @@ function continueStatement(numero) {
         } else {
             suma = suma + 2;
             arrayNumeros.push(suma)
-        }
+        }   
     }
+
     return arrayNumeros;
 }
 
+    
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -354,4 +358,4 @@ module.exports = {
   mayorACien,
   breakStatement,
   continueStatement
-};
+}
