@@ -146,16 +146,16 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
     // Tu código:
-    var producto = Math.pow(num, 2);
-    return producto;
+
+    return Math.pow(num, 2);
     
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
     // Tu código:
-    var producto = Math.pow(num, 3);
-    return producto;
+   
+    return Math.pow(num, 3);
 
 }
 
@@ -170,8 +170,7 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-    var producto = Math.round(num);
-    return producto;
+    return Math.round(num);
 
 }
 
@@ -187,9 +186,10 @@ function redondearHaciaArriba(num) {
 function numeroRandom(min, max) {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-    min = Math.ceil (0);
-    max = Math.floor (1);
-    return Math.random() * (max - min) + min;
+    min = Math.ceil(0);
+    max = Math.floor(1);
+
+    return Math.random(min - max);
 
 
 }
@@ -200,15 +200,15 @@ function esPositivo(numero) {
     //Si el número es negativo, devolver ---> "Es negativo"
     //Si el número es 0, devuelve false
     if (numero > 0) {
-        return "Es positivo";
+        return "Es positivo"
     }
     else if (numero < 0) {
-        return "Es negativo";
+        return "Es negativo"
     }
-    else if (numero == 0)
-    {
-        return false;
+    else (numero == 0); {
+        return false
     }
+
 }
 
 
@@ -283,12 +283,17 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-    var product = letra.lenght;
-    if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
-        return "Es vocal";
+
+    var producto = letra
+
+    if (producto === 'a' || producto === 'e' || producto === 'i' || producto === 'o' || producto === 'u') {
+        return "Es vocal"
     }
-    else if (product < 1) { return "Dato incorrecto" }
-    else { return "Dato incorrecto" }
+    else (producto.length > 1); {
+        return "Dato incorrecto"
+    }
+
+    return "Dato incorrecto";
     
 }
 
