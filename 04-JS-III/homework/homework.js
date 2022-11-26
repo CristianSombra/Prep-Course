@@ -16,7 +16,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
     // Tu código:
-    return array [array.length - 1]
+    return array [array.length - 1];
 
 
 }
@@ -37,11 +37,11 @@ function incrementarPorUno(array) {
     // Aumenta cada entero por 1
     // y devuelve el array
     // Tu código:
-    for (var i = 0; i < array.length; i++) {
-        array[i] = array[i] + 1
-    } return array
+    var incrementar = array.map(function (array) {
+        return array + 1
+    });
 
-
+    return incrementar;
 
 }
 
@@ -51,9 +51,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(elemento);
-    return array;
+    array.push(elemento)
 
+    return array;
 
 }
 
@@ -76,9 +76,11 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
 
-    frase = palabras.join(' ');
+    var frase = palabras.reduce(function (acc, elemento) {
+        return acc + " " + elemento
+    })
 
-    return frase
+    return frase;
 
 }
 
@@ -102,13 +104,12 @@ function agregarNumeros(numeros) {
     // "numeros" debe ser un arreglo de enteros (int/integers)
     // Suma todos los enteros y devuelve el valor
     // Tu código:
-    let suma = Number()
-
-    for (let i = 0; i < numeros.length; i++) {
-        suma += Math.round(numeros[i])
-    }
+    var suma = numeros.reduce(function (acc, elemento) {
+        return acc + elemento
+    });
 
     return suma;
+
 
 }
 
@@ -133,16 +134,8 @@ function numeroMasGrande(numeros) {
     // "numeros" debe ser una matriz de enteros (int/integers)
     // Devuelve el número más grande
     // Tu código:
-    var cajita = 0;
-
-    for (var i = 0; i < numeros.length; i++) { 
-    if (numeros[i] > cajita) {
-        cajita = numeros[i];
-
-    }
-}
-
-    return cajita;	
+    var resultado = Math.max(...numeros);
+    return resultado;
 
 
 }
@@ -197,13 +190,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Escribe tu código aquí
 
     if (numeroDeDia === 1 || numeroDeDia === 7) {
-        return "Es fin de semana"
-
+        return "Es fin de semana";
     }
-    else if (numeroDeDia > 1 && numeroDeDia < 7) {
-        return "Es dia Laboral"
 
-    }
+    return "Es dia Laboral";
+
 } 
 
 

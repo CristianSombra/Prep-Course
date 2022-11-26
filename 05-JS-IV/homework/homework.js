@@ -71,16 +71,16 @@ function nuevoUsuario (nombre, email, password) {
 	return objeto;
 }
 
-function tieneEmail (usuario) {
-  // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
-  // De lo contratio, devuelve "false"
-  // Tu código:
-	if (usuario['email'] != undefined) {
+function tieneEmail(usuario) {
+	// Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
+	// De lo contratio, devuelve "false"
+	// Tu código:
+	if (usuario.email != undefined) {
 		return true;
 	}
-	else {
-		return false;
-	}
+	return false;
+
+
 }
 
 function tienePropiedad(objeto, propiedad) {
@@ -91,9 +91,9 @@ function tienePropiedad(objeto, propiedad) {
 	for (clave in objeto) {
 		if (clave === propiedad) {
 			return true;
-		}
-		return false;
+        }
 	}
+	return false;
 }
 
 function verificarPassword (usuario, password) {
@@ -115,7 +115,7 @@ function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
-	usuario.password = nuevaPassword;
+	 usuario.password = nuevaPassword;
 
 	return usuario;
 
@@ -156,25 +156,23 @@ function sumarLikesDeUsuario (usuario) {
 	for (var i = 0; i < usuario.posts.length; i++) {
 		sumaLikes = sumaLikes + usuario.posts[i].likes
 	}
-
 	return sumaLikes;
-
 
 }
 
-function agregarMetodoCalculoDescuento (producto) {
-  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
-  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
-  // El método resta el descuento del precio y devuelve el precio con descuento
-  // Devuelve el objeto "producto" al final de la función
-  // Ejemplo:
-  // producto.precio -> 20
-  // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
-  // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
-  // Tu código:
-	producto.calcularPrecioDescuento = function () {
+function agregarMetodoCalculoDescuento(producto) {
+	// Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
+	// Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+	// El método resta el descuento del precio y devuelve el precio con descuento
+	// Devuelve el objeto "producto" al final de la función
+	// Ejemplo:
+	// producto.precio -> 20
+	// producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
+	// producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
+	// Tu código:
 
-		return this.precio - (this.precio * this.porcentajeDeDescuento)
+	producto.calcularPrecioDescuento = function () {
+		return producto.precio - (this.precio * this.porcentajeDeDescuento);
 	}
 
 	return producto;
@@ -198,5 +196,5 @@ module.exports = {
   agregarAmigo,
   pasarUsuarioAPremium,
   sumarLikesDeUsuario,
-  agregarMetodoCalculoDescuento
+	agregarMetodoCalculoDescuento
 }
